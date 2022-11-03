@@ -98,7 +98,7 @@ test('this test should pass', (expect) => {
     const actual2 = makeLuckyGreeting(-8, -4);
     expect.equal(actual2, expected2, 'Hello! Your lucky number for the day is -12.');
 
-    // const expected3 = 'Hello! Your lucky number for the day is 12.';
-    // const actual3 = makeLuckyGreeting();
-    // expect.equal(actual3, expected3, 'Hello! Your lucky number for the day is 12.');
+    const expected3 = 'Hello! Your lucky number for the day is 12.';
+    const actual3 = makeLuckyGreeting(7.5, 4.5);
+    expect.equal(actual3, expected3, 'Hello! Your lucky number for the day is 12.');
 });
