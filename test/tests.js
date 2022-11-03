@@ -52,6 +52,10 @@ test('this test should pass', (expect) => {
     const expected2 = 144;
     const actual2 = multiplyBy12ThenHalve(4 * 6);
     expect.equal(actual2, expected2, 144);
+
+    const expected3 = 43.2;
+    const actual3 = multiplyBy12ThenHalve(7.2);
+    expect.equal(actual3, expected3, 43.2);
 });
 
 // skip('this test should be skipped', (expect) => {
