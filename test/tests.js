@@ -63,4 +63,12 @@ test('this test should be skipped', (expect) => {
     const expected = [1, 2, 3];
     const actual = returnAsAnArray(1, 2, 3);
     expect.deepEqual(actual, expected, [1, 2, 3]);
+
+    const expected2 = [1, 2, 3];
+    const actual2 = returnAsAnArray(1, 2, 1 + 2);
+    expect.deepEqual(actual2, expected2, [1, 2, 3]);
+
+    const expected3 = ['one', 'two', 'three'];
+    const actual3 = returnAsAnArray('one', 'two', 'three');
+    expect.deepEqual(actual3, expected3, ['one', 'two', 'three']);
 });
