@@ -18,10 +18,12 @@ test('this test should pass', (expect) => {
 
 test('this test should pass', (expect) => {
     const expected = 'bunny rabbit!!!';
-
     const actual = addExclamationPoints('bunny rabbit');
-
     expect.equal(actual, expected, 'bunny rabbit!!!');
+
+    const expected2 = 'BUNNY!!!';
+    const actual2 = addExclamationPoints('BUNNY');
+    expect.equal(actual, expected, 'BUNNY!!!');
 });
 
 // skip('this test should pass', (expect) => {
