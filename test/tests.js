@@ -5,6 +5,7 @@ import {
     multiplyBySeven,
     myFunction,
     returnAsAnArray,
+    returnAsAString,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -59,7 +60,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 43.2);
 });
 
-test('this test should be skipped', (expect) => {
+skip('this test should be skipped', (expect) => {
     const expected = [1, 2, 3];
     const actual = returnAsAnArray(1, 2, 3);
     expect.deepEqual(actual, expected, [1, 2, 3]);
@@ -71,4 +72,10 @@ test('this test should be skipped', (expect) => {
     const expected3 = ['one', 'two', 'three'];
     const actual3 = returnAsAnArray('one', 'two', 'three');
     expect.deepEqual(actual3, expected3, ['one', 'two', 'three']);
+});
+
+test('this test should pass', (expect) => {
+    const expected = '456';
+    const actual = returnAsAString(4, 5, 6);
+    expect.equal(actual, expected, '456');
 });
