@@ -38,6 +38,10 @@ test('this test should pass', (expect) => {
     const expected2 = 3885;
     const actual2 = multiplyBySeven(555);
     expect.equal(actual2, expected2, 3885);
+
+    const expected3 = 21;
+    const actual3 = multiplyBySeven(1 + 2);
+    expect.equal(actual3, expected3, 21);
 });
 
 // skip('this test should pass', (expect) => {
