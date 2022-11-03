@@ -23,7 +23,11 @@ test('this test should pass', (expect) => {
 
     const expected2 = 'BUNNY!!!';
     const actual2 = addExclamationPoints('BUNNY');
-    expect.equal(actual, expected, 'BUNNY!!!');
+    expect.equal(actual2, expected2, 'BUNNY!!!');
+
+    const expected3 = '24!!!';
+    const actual3 = addExclamationPoints('24');
+    expect.equal(actual3, expected3, '24!!!');
 });
 
 // skip('this test should pass', (expect) => {
