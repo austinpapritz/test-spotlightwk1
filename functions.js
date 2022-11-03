@@ -22,7 +22,6 @@ export function addExclamationPoints(str) {
 
 /* 
 Input:
-
 4
 
 Output: 
@@ -31,7 +30,7 @@ Output:
 */
 
 export function multiplyBySeven(num) {
-    return `(${num} * 12) / 2`;
+    return num * 7;
 }
 
 // This function should take in a number and multiply it by twelve then cut the result in half

@@ -16,7 +16,7 @@ test('this test should pass', (expect) => {
     expect.equal(actual, expected, 'true = true');
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = 'bunny rabbit!!!';
     const actual = addExclamationPoints('bunny rabbit');
     expect.equal(actual, expected, 'bunny rabbit!!!');
@@ -30,13 +30,11 @@ test('this test should pass', (expect) => {
     expect.equal(actual3, expected3, '24!!!');
 });
 
-// skip('this test should pass', (expect) => {
-//     const expected = 24;
-
-//     const actual = multiplyBySeven(4);
-
-//     expect.equal(actual, expected, 24);
-// });
+test('this test should pass', (expect) => {
+    const expected = 21;
+    const actual = multiplyBySeven(3);
+    expect.equal(actual, expected, 21);
+});
 
 // skip('this test should pass', (expect) => {
 //     const expected =
