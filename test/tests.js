@@ -4,6 +4,7 @@ import {
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
+    returnAsAnArray,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -44,7 +45,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 21);
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = 36;
     const actual = multiplyBy12ThenHalve(6);
     expect.equal(actual, expected, 36);
@@ -58,10 +59,8 @@ test('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 43.2);
 });
 
-// skip('this test should be skipped', (expect) => {
-//     const expected = true;
-
-//     const actual = true;
-
-//     expect.equal(actual, expected);
-// });
+test('this test should be skipped', (expect) => {
+    const expected = [1, 2, 3];
+    const actual = returnAsAnArray(1, 2, 3);
+    expect.deepEqual(actual, expected, [1, 2, 3]);
+});
