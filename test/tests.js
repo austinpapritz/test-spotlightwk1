@@ -78,4 +78,8 @@ test('this test should pass', (expect) => {
     const expected = '456';
     const actual = returnAsAString(4, 5, 6);
     expect.equal(actual, expected, '456');
+
+    const expected2 = '435363';
+    const actual2 = returnAsAString(43, 53, 63);
+    expect.equal(actual2, expected2, '435363');
 });
