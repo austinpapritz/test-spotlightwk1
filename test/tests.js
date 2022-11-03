@@ -30,7 +30,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, '24!!!');
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = 21;
     const actual = multiplyBySeven(3);
     expect.equal(actual, expected, 21);
@@ -44,13 +44,11 @@ test('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 21);
 });
 
-// skip('this test should pass', (expect) => {
-//     const expected =
-
-//     const actual = multiplyBy12ThenHalve();
-
-//     expect.equal(actual, expected, );
-// });
+test('this test should pass', (expect) => {
+    const expected = 36;
+    const actual = multiplyBy12ThenHalve(6);
+    expect.equal(actual, expected, 36);
+});
 
 // skip('this test should be skipped', (expect) => {
 //     const expected = true;
