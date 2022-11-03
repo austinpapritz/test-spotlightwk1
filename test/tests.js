@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     addExclamationPoints,
+    makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
@@ -86,4 +87,10 @@ test('this test should pass', (expect) => {
     const expected3 = '43.353.363.3';
     const actual3 = returnAsAString(43.3, 53.3, 63.3);
     expect.equal(actual3, expected3, '43.353.363.3');
+});
+
+test('this test should pass', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12.';
+    const actual = makeLuckyGreeting(8, 4);
+    expect.equal(actual, expected, 'Hello! Your lucky number for the day is 12.');
 });
