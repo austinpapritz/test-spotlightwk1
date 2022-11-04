@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     addExclamationPoints,
+    getSecondItem,
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
@@ -75,7 +76,7 @@ skip('this test should be skipped', (expect) => {
     expect.deepEqual(actual3, expected3, ['one', 'two', 'three']);
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = '456';
     const actual = returnAsAString(4, 5, 6);
     expect.equal(actual, expected, '456');
@@ -89,7 +90,7 @@ test('this test should pass', (expect) => {
     expect.equal(actual3, expected3, '43.353.363.3');
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = 'Hello! Your lucky number for the day is 12.';
     const actual = makeLuckyGreeting(8, 4);
     expect.equal(actual, expected, 'Hello! Your lucky number for the day is 12.');
@@ -101,4 +102,18 @@ test('this test should pass', (expect) => {
     const expected3 = 'Hello! Your lucky number for the day is 12.';
     const actual3 = makeLuckyGreeting(7.5, 4.5);
     expect.equal(actual3, expected3, 'Hello! Your lucky number for the day is 12.');
+});
+
+test('this test should pass', (expect) => {
+    const expected = 2;
+    const actual = getSecondItem([1, 2, 3]);
+    expect.equal(actual, expected, '2');
+
+    const expected2 = 'boop';
+    const actual2 = getSecondItem(['beep', 'boop', 'bap']);
+    expect.equal(actual2, expected2, 'boop');
+
+    const expected3 = 'boop';
+    const actual3 = getSecondItem(['beep', 'boop', 'bap', 'boink']);
+    expect.equal(actual3, expected3, 'boop');
 });
