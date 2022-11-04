@@ -160,11 +160,8 @@ Output:
 
 */
 
-export function renderDogLI(dog, age) {
-    return '<li>' + dog + '</li>';
-    //     const li = document.createElement('li');
-    //     return li.append(`${dog}`);
-    //     console.log(li.append(`${dog}`));
+export function renderDogLI(dog) {
+    return `<li>${dog.name}</li>`;
 }
 
 // This function should take a dog object and return a div with the dog's information

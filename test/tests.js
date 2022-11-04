@@ -23,7 +23,7 @@ test('this test should pass', (expect) => {
     expect.equal(actual, expected, 'true = true');
 });
 
-skip('this test should pass', (expect) => {
+test('this test should pass', (expect) => {
     const expected = 'bunny rabbit!!!';
     const actual = addExclamationPoints('bunny rabbit');
     expect.equal(actual, expected, 'bunny rabbit!!!');
@@ -37,7 +37,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, '24!!!');
 });
 
-skip('this test should pass', (expect) => {
+test('this test should pass', (expect) => {
     const expected = 21;
     const actual = multiplyBySeven(3);
     expect.equal(actual, expected, 21);
@@ -51,7 +51,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 21);
 });
 
-skip('this test should pass', (expect) => {
+test('this test should pass', (expect) => {
     const expected = 36;
     const actual = multiplyBy12ThenHalve(6);
     expect.equal(actual, expected, 36);
@@ -79,7 +79,7 @@ test('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 7.875);
 });
 
-skip('this test should be skipped', (expect) => {
+test('this test should be skipped', (expect) => {
     const expected = [1, 2, 3];
     const actual = returnAsAnArray(1, 2, 3);
     expect.deepEqual(actual, expected, [1, 2, 3]);
@@ -93,7 +93,7 @@ skip('this test should be skipped', (expect) => {
     expect.deepEqual(actual3, expected3, ['one', 'two', 'three']);
 });
 
-skip('this test should pass', (expect) => {
+test('this test should pass', (expect) => {
     const expected = '456';
     const actual = returnAsAString(4, 5, 6);
     expect.equal(actual, expected, '456');
@@ -107,7 +107,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, '43.353.363.3');
 });
 
-skip('this test should pass', (expect) => {
+test('this test should pass', (expect) => {
     const expected = 'Hello! Your lucky number for the day is 12.';
     const actual = makeLuckyGreeting(8, 4);
     expect.equal(actual, expected, 'Hello! Your lucky number for the day is 12.');
@@ -121,7 +121,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 'Hello! Your lucky number for the day is 12.');
 });
 
-skip('this test should pass', (expect) => {
+test('this test should pass', (expect) => {
     const expected = 2;
     const actual = getSecondItem([1, 2, 3]);
     expect.equal(actual, expected, '2');
@@ -135,7 +135,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 'boop');
 });
 
-skip('this test should pass', (expect) => {
+test('this test should pass', (expect) => {
     const expected = 3;
     const actual = getLastItem([1, 2, 3]);
     expect.equal(actual, expected, '3');
@@ -151,14 +151,14 @@ skip('this test should pass', (expect) => {
 
 test('this test should pass', (expect) => {
     const expected = '<li>Dougie</li>';
-    const actual = renderDogLI('Dougie', 2);
+    const actual = renderDogLI({ name: 'Dougie', age: 6 });
     expect.equal(actual, expected, '<li>Dougie</li>');
 
     const expected2 = '<li>Dougie Doo</li>';
-    const actual2 = renderDogLI('Dougie Doo', 2);
+    const actual2 = renderDogLI({ name: 'Dougie Doo', age: 2 });
     expect.equal(actual2, expected2, '<li>Dougie Doo</li>');
 
     const expected3 = '<li>™™¶</li>';
-    const actual3 = renderDogLI('™™¶', 34);
+    const actual3 = renderDogLI({ name: '™™¶', age: 34 });
     expect.equal(actual3, expected3, '<li>™™¶</li>');
 });
