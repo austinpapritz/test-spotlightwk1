@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     addExclamationPoints,
+    divideThenMultiply,
     getLastItem,
     getSecondItem,
     makeLuckyGreeting,
