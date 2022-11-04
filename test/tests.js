@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     addExclamationPoints,
+    divideThenMultiply,
     getLastItem,
     getSecondItem,
     makeLuckyGreeting,
@@ -63,6 +64,20 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 43.2);
 });
 
+test('this test should pass', (expect) => {
+    const expected = 12;
+    const actual = divideThenMultiply(4, 2, 6);
+    expect.equal(actual, expected, 12);
+
+    const expected2 = -0.00041772796739684157;
+    const actual2 = divideThenMultiply(-4, 7852, 0.82);
+    expect.equal(actual2, expected2, -0.00041772796739684157);
+
+    const expected3 = 7.875;
+    const actual3 = divideThenMultiply(7, 8, 9);
+    expect.equal(actual3, expected3, 7.875);
+});
+
 skip('this test should be skipped', (expect) => {
     const expected = [1, 2, 3];
     const actual = returnAsAnArray(1, 2, 3);
@@ -119,7 +134,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 'boop');
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = 3;
     const actual = getLastItem([1, 2, 3]);
     expect.equal(actual, expected, '3');
