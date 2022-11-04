@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import {
     addExclamationPoints,
+    getLastItem,
     getSecondItem,
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
@@ -104,7 +105,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 'Hello! Your lucky number for the day is 12.');
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = 2;
     const actual = getSecondItem([1, 2, 3]);
     expect.equal(actual, expected, '2');
@@ -116,4 +117,18 @@ test('this test should pass', (expect) => {
     const expected3 = 'boop';
     const actual3 = getSecondItem(['beep', 'boop', 'bap', 'boink']);
     expect.equal(actual3, expected3, 'boop');
+});
+
+test('this test should pass', (expect) => {
+    const expected = 3;
+    const actual = getLastItem([1, 2, 3]);
+    expect.equal(actual, expected, '3');
+
+    const expected2 = 4;
+    const actual2 = getLastItem([1, 2, 3, 4]);
+    expect.equal(actual2, expected2, 4);
+
+    const expected3 = 1;
+    const actual3 = getLastItem([1]);
+    expect.equal(actual3, expected3, '1');
 });
