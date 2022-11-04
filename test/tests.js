@@ -7,6 +7,7 @@ import {
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
+    renderDogLI,
     returnAsAnArray,
     returnAsAString,
 } from '../functions.js';
@@ -61,6 +62,20 @@ skip('this test should pass', (expect) => {
     const expected3 = 43.2;
     const actual3 = multiplyBy12ThenHalve(7.2);
     expect.equal(actual3, expected3, 43.2);
+});
+
+test('this test should pass', (expect) => {
+    const expected = 12;
+    const actual = divideThenMultiply(4, 2, 6);
+    expect.equal(actual, expected, 12);
+
+    const expected2 = -0.00041772796739684157;
+    const actual2 = divideThenMultiply(-4, 7852, 0.82);
+    expect.equal(actual2, expected2, -0.00041772796739684157);
+
+    const expected3 = 7.875;
+    const actual3 = divideThenMultiply(7, 8, 9);
+    expect.equal(actual3, expected3, 7.875);
 });
 
 skip('this test should be skipped', (expect) => {
@@ -119,7 +134,7 @@ skip('this test should pass', (expect) => {
     expect.equal(actual3, expected3, 'boop');
 });
 
-test('this test should pass', (expect) => {
+skip('this test should pass', (expect) => {
     const expected = 3;
     const actual = getLastItem([1, 2, 3]);
     expect.equal(actual, expected, '3');
@@ -131,4 +146,18 @@ test('this test should pass', (expect) => {
     const expected3 = 1;
     const actual3 = getLastItem([1]);
     expect.equal(actual3, expected3, '1');
+});
+
+test('this test should pass', (expect) => {
+    const expected = '<li>Dougie</li>';
+    const actual = renderDogLI('Dougie', 2);
+    expect.equal(actual, expected, '<li>Dougie</li>');
+
+    const expected2 = '<li>Dougie Doo</li>';
+    const actual2 = renderDogLI('Dougie Doo', 2);
+    expect.equal(actual2, expected2, '<li>Dougie Doo</li>');
+
+    const expected3 = '<li>™™¶</li>';
+    const actual3 = renderDogLI('™™¶', 34);
+    expect.equal(actual3, expected3, '<li>™™¶</li>');
 });

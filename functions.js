@@ -63,8 +63,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return true;
-}
+    return (firstNumber / secondNumber) * thirdNumber;
 
 // This function should take in three numbers and return those numbers in an array
 
@@ -160,8 +159,11 @@ Output:
 
 */
 
-export function renderDogLI(dog) {
-    return true;
+export function renderDogLI(dog, age) {
+    return '<li>' + dog + '</li>';
+    //     const li = document.createElement('li');
+    //     return li.append(`${dog}`);
+    //     console.log(li.append(`${dog}`));
 }
 
 // This function should take a dog object and return a div with the dog's information
